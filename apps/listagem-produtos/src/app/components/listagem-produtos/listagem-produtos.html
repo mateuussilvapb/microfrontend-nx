@@ -1,0 +1,20 @@
+<main>
+  <section class="produtos">
+    <h2>Produtos mais acessados</h2>
+    <div class="produto-grid">
+      <div class="produto" *ngFor="let product of products$ | async">
+        <img
+          [src]="product.image"
+          [alt]="product.description"
+          class="h-full w-full object-cover object-center lg:h-full lg:w-full"
+        />
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.description }}</p>
+        <p class="preco">{{ product.price | currency : 'BRL' }}</p>
+        <button (click)="addToCart(product)" class="btn">
+          Adicionar ao carrinho
+        </button>
+      </div>
+    </div>
+  </section>
+</main>

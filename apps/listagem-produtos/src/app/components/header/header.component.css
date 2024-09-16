@@ -1,0 +1,50 @@
+.navbar {
+  background-color: #20232a;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo img {
+  height: 40px;
+}
+
+.navbar .nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar .nav-links li {
+  display: inline;
+}
+
+.navbar .nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar .user-profile img {
+  height: 40px;
+  border-radius: 50%;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.cart img {
+  height: 24px;
+  cursor: pointer;
+}
+
+.user-profile img {
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}

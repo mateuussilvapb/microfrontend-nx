@@ -14,7 +14,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@ng-mf/data-access-cart": ["libs/shared/data-access-cart/src/index.ts"],
+      "@ng-mf/data-access-products": [
+        "libs/shared/data-access-products/src/index.ts"
+      ],
+      "cart/Routes": ["apps/cart/src/app/remote-entry/entry.routes.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

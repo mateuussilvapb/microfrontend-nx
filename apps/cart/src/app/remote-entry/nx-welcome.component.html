@@ -1,0 +1,27 @@
+<main>
+  <section class="checkout-container">
+    <h2>Checkout</h2>
+    <div class="checkout-list">
+      <div class="checkout-item" *ngFor="let product of cartService.cart">
+        <div class="item-info">
+          <img [src]="product.image" alt="Camiseta Preta" />
+          <div>
+            <h3>{{ product.name }}</h3>
+            <p>{{ product.description }}</p>
+          </div>
+        </div>
+        <div class="item-price">
+          <p>{{ product.price | currency : 'BRL' }}</p>
+          <button class="btn-remove" (click)="removeFromCart(product)">
+            Remover
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="checkout-total">
+      <h3>Total</h3>
+      <p class="text-xl font-bold">{{ getTotal() | currency : 'BRL' }}</p>
+    </div>
+  </section>
+</main>
