@@ -1,6 +1,6 @@
 import { Component, inject, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DataAccessCartComponent } from '@ng-mf/data-access-cart';
+import { DataAccessCartService } from '@ng-mf/data-access-cart';
 
 @Component({
   selector: 'ng-mf-nx-welcome',
@@ -11,7 +11,7 @@ import { DataAccessCartComponent } from '@ng-mf/data-access-cart';
   encapsulation: ViewEncapsulation.None,
 })
 export class NxWelcomeComponent {
-  cartService = inject(DataAccessCartComponent);
+  cartService = inject(DataAccessCartService);
 
   getTotal() {
     return this.cartService

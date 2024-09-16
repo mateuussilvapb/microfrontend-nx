@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
-export class DataAccessProductsComponent {
+export class DataAccessProductsService {
   products: any[] = [
     {
       name: 'Camiseta Básica',

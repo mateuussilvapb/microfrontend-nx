@@ -2,8 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AppHeaderComponent } from './components/header/header.component';
-import { DataAccessProductsComponent } from '@ng-mf/data-access-products';
-import { DataAccessCartComponent } from '@ng-mf/data-access-cart';
+import { DataAccessProductsService } from '@ng-mf/data-access-products';
+import { DataAccessCartService } from '@ng-mf/data-access-cart';
 
 @Component({
   standalone: true,
@@ -13,8 +13,8 @@ import { DataAccessCartComponent } from '@ng-mf/data-access-cart';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  productsService = inject(DataAccessProductsComponent);
-  cartService = inject(DataAccessCartComponent);
+  productsService = inject(DataAccessProductsService);
+  cartService = inject(DataAccessCartService);
 
   products$ = this.productsService.getAllProducts$();
 

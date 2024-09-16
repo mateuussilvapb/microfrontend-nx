@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { DataAccessCartComponent } from '@ng-mf/data-access-cart';
+import { DataAccessCartService } from '@ng-mf/data-access-cart';
 
 @Component({
   standalone: true,
@@ -11,5 +11,5 @@ import { DataAccessCartComponent } from '@ng-mf/data-access-cart';
   styleUrls: [`./header.component.css`],
 })
 export class AppHeaderComponent {
-  cartService = inject(DataAccessCartComponent);
+  cartService = inject(DataAccessCartService);
 }
